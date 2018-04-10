@@ -8,12 +8,14 @@ perfect-world (pw) aims to replicate a "perfect world" where applications are
 separated by different user accounts, allowing the operating system, file
 system, and SELinux to fully separate disparate actions. This is useful from
 several perspectives:
+
     - Security: ensuring that each application has the minimum necessary
         permissions.
     - Reproducibility: ensuring that application development starts from a
         known state.
     - Isolation: ensuring that only limited access to specific resources is
         allowed.
+
 These can be accomplished by various means: native applications, chroot jails,
 docker containers, and virtual machines. This project aims to be lighter weight
 than similar separation projects such as Qubes OS, but potentially allow for
@@ -64,12 +66,14 @@ In addition to UIDs, groups can be used to signal world types. This would also
 allow for additional groups for signaling features:
 
 Types:
+
     - pwbase: base/raw application worlds
     - pwchroot: chrooted worlds
     - pwcontainer: containerized worlds
     - pwvm: virtual machine worlds
 
 Features:
+
     - pwcommunication: for communicating with other worlds besides the admin
     - pwgui: for launching gui applications
     - pwadmin: for performing administrative actions
