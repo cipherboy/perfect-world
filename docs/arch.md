@@ -9,12 +9,12 @@ separated by different user accounts, allowing the operating system, file
 system, and SELinux to fully separate disparate actions. This is useful from
 several perspectives:
 
-    - Security: ensuring that each application has the minimum necessary
-        permissions.
-    - Reproducibility: ensuring that application development starts from a
-        known state.
-    - Isolation: ensuring that only limited access to specific resources is
-        allowed.
+- Security: ensuring that each application has the minimum necessary
+permissions.
+- Reproducibility: ensuring that application development starts from a known
+state.
+- Isolation: ensuring that only limited access to specific resources is
+allowed.
 
 These can be accomplished by various means: native applications, chroot jails,
 docker containers, and virtual machines. This project aims to be lighter weight
@@ -53,10 +53,10 @@ which would likely be shorter.
 
 Suggested:
 
-    - 100 - 299: base worlds (next free)
-    - 300 - 499: chrooted worlds (next free)
-    - 500 - 699: container worlds (next free)
-    - 700 - 899: virtual machine worlds (next free)
+- 100 - 299: base worlds (next free)
+- 300 - 499: chrooted worlds (next free)
+- 500 - 699: container worlds (next free)
+- 700 - 899: virtual machine worlds (next free)
 
 In this way, world types can be inferred by their uid.
 
@@ -67,19 +67,19 @@ allow for additional groups for signaling features:
 
 Types:
 
-    - pwbase: base/raw application worlds
-    - pwchroot: chrooted worlds
-    - pwcontainer: containerized worlds
-    - pwvm: virtual machine worlds
+- pwbase: base/raw application worlds
+- pwchroot: chrooted worlds
+- pwcontainer: containerized worlds
+- pwvm: virtual machine worlds
 
 Features:
 
-    - pwcommunication: for communicating with other worlds besides the admin
-    - pwgui: for launching gui applications
-    - pwadmin: for performing administrative actions
-    - pwclipboard: for access to the perfect-world clipboard
-    - pwsharedfs: for access to shared file system locations (r/w)
-    - pwsharedfsr: for read-only access to shared file system locations
+- pwcommunication: for communicating with other worlds besides the admin
+- pwgui: for launching gui applications
+- pwadmin: for performing administrative actions
+- pwclipboard: for access to the perfect-world clipboard
+- pwsharedfs: for access to shared file system locations (r/w)
+- pwsharedfsr: for read-only access to shared file system locations
 
 
 ## Secure IAC
