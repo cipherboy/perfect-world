@@ -1,4 +1,4 @@
-import utils
+import pw.utils
 
 import pyotp
 import qrcode
@@ -17,8 +17,8 @@ def check_otp_totp(secret, token):
     totp = pyotp.TOTP(secret)
     return totp.verify(token)
 
-def totp():
-    cfg = utils.load_config('/home/cipherboy/.pw/auth/totp.json')
+def request():
+    cfg = pw.utils.load_config('/etc/pw/auth/totp.json')
     token = getpass.getpass("TOTP: ")
 
     for device in cfg['devices']:
@@ -26,8 +26,4 @@ def totp():
             return True
 
     return False
-
-
-if __name__ == "__main__":
-    print(totp())
 

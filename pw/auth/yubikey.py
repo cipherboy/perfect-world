@@ -1,4 +1,4 @@
-import utils
+import pw.utils
 
 import random
 import requests
@@ -42,8 +42,8 @@ def check_otp_yubikey(url, acct_id, api_key, token):
 
     return r_obj['status'] == 'OK'
 
-def yubikey():
-    cfg = utils.load_config('/home/cipherboy/.pw/auth/yubikey.json')
+def request():
+    cfg = pw.utils.load_config('/etc/pw/auth/yubikey.json')
     token = getpass.getpass("YubiKey OTP: ")
 
     for device in cfg['devices']:
@@ -54,8 +54,4 @@ def yubikey():
                     return True
 
     return False
-
-
-if __name__ == "__main__":
-    print(yubikey())
 
