@@ -43,7 +43,7 @@ def check_otp_yubikey(url, acct_id, api_key, token):
     return r_obj['status'] == 'OK'
 
 def yubikey():
-    cfg = utils.load_config('/home/cipherboy/.pw/yubikey.json')
+    cfg = utils.load_config('/home/cipherboy/.pw/auth/yubikey.json')
     token = getpass.getpass("YubiKey OTP: ")
 
     for device in cfg['devices']:
