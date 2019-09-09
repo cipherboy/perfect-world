@@ -19,8 +19,3 @@ def gen_key(keyfile, keytype="rsa"):
         return False
 
     return True
-
-
-
-
-
